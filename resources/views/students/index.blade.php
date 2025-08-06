@@ -5,10 +5,9 @@
     <title>Daftar Siswa</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-blue-300 p-6">
-    <h1 class="text-3xl font-bold mb-6 text-center">Daftar Siswa</h1>
-
+<body class="bg-blue-200 min-h-screen flex items-center justify-center p-6">
     <x-card>
+    <h1 class="text-3xl font-bold mb-6 text-center">Daftar Siswa</h1>
     <div class="grid grid-cols-2 gap-4">
         @foreach($students as $student)
             <a href="/students/{{ $student['id'] }}" class="block">

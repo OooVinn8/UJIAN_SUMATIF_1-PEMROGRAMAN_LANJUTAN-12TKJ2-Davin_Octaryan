@@ -1,5 +1,5 @@
 @props(['type' => 'card'])
 
-<div class="bg-green-200 p-6 rounded">
+<div class="bg-blue-300 p-4 rounded-6">
     {{ $slot }}
 </div>
