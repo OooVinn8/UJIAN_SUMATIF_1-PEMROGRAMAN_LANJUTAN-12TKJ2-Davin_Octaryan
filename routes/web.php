@@ -7,5 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/students', [StudentController::class, 'index']);
-Route::get('/students/{studentId}', [StudentController::class, 'show']);
+Route::controller(StudentController::class)->prefix('students')->group(function () {
+    Route::get('/', 'index');                
+    Route::get('/{studentId}', 'show');      
+});
